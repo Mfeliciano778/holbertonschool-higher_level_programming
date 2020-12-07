@@ -1,6 +1,6 @@
 #!/bin/bash
 if test -f "$PYFILE";
 then
-	echo Compiling $PYFILE ...
+	echo "Compiling $PYFILE ..."
 	python -m py_compile $PYFILE
 fi
