@@ -11,7 +11,7 @@ if __name__ == "__main__":
             print("{:d}: {}".format(i, argv[i]))
             i += 1
     else:
-        print("{:d} arguments".format(num - 1))
+        print("{:d} arguments:".format(num - 1))
         for i in range(1, num):
             print("{:d}: {}".format(i, argv[i]))
             i += 1
