@@ -4,7 +4,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     a = len(tuple_a)
     b = len(tuple_b)
     for index in range(0, 2):
-        if index > a and index > b:
+        if a == 0 and b == 0:
             sum_tuple.append(0)
         elif b > a and index > (a - 1):
             sum_tuple.append(tuple_b[index])
