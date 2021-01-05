@@ -9,9 +9,9 @@ class Square:
         '''__init__ - Creates instance
            _Square_size: size of square'''
 
-        if type(value) is not int:
+        if type(size) is not int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
