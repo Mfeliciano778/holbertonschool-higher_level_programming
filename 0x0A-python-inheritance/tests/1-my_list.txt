@@ -1,0 +1,6 @@
+>>> MyList = __import__('1-my-list').MyList
+>>> import sys
+
+>>>ml = MyList()
+>>>ml.print_sorted()
+[]
