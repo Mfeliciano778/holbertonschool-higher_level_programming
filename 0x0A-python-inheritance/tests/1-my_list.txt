@@ -1,4 +1,8 @@
-to run "python3-m doctest -v ./tests/1-my_list.txt
+The ``1-my_list`` module
+======================
+Using ``MyList``
+-------------------
+
 >>> MyList = __import__('1-my-list').MyList
 >>> import sys
 
