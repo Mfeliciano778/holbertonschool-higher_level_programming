@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''add_item - script add arguments to a python list then adds it to file'''
-import json, sys
+import json
+import sys
 loads = __import__('6-load_from_json_file').load_from_json_file
 saves = __import__('5-save_to_json_file').save_to_json_file
 
