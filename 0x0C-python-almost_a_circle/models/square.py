@@ -12,7 +12,7 @@ class Square(Rectangle):
     def __str__(self):
         '''__str__ returns the string rep of the square instance'''
         return "[square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-        self.width)
+                                                 self.width)
 
     @property
     def size(self):
@@ -38,5 +38,14 @@ class Square(Rectangle):
             if argc >= 5:
                 self.y = args[3]
         else:
-            for key,value in kwargs.items():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        '''returns the dictionary representation of a Square'''
+        rect_dict = {}
+        rect_dict['id'] = self.id
+        rect_dict['size'] = self.width
+        rect_dict['x'] = self.x
+        rect_dict['y'] = self.y
+        return rect_dict

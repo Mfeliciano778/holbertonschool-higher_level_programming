@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''class Base'''
+import json
 from models.base import Base
 
 
@@ -94,8 +95,9 @@ class Rectangle(Base):
 
     def __str__(self):
         '''__str__ returns the string rep of the rectangle instance'''
-        return "[Rectangle] ({}) {}/{} {}/{}".format(self.id, self.__x,
-        self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         '''update - assigns an argument to each attribute'''
@@ -112,5 +114,15 @@ class Rectangle(Base):
             if argc >= 5:
                 self.y = args[4]
         else:
-            for key,value in kwargs.items():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        '''returns the dictionary representation of a Rectangle'''
+        rect_dict = {}
+        rect_dict['id'] = self.id
+        rect_dict['width'] = self.width
+        rect_dict['height'] = self.height
+        rect_dict['x'] = self.x
+        rect_dict['y'] = self.y
+        return rect_dict
