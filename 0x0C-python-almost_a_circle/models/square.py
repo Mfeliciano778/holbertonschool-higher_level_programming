@@ -29,13 +29,13 @@ class Square(Rectangle):
         '''update - assigns attributes to square'''
         argc = len(args)
         if args is not None and argc > 0:
-            if args[0]:
+            if argc >= 1:
                 self.id = args[0]
             if argc >= 2:
                 self.size = args[1]
-            if argc >= 4:
+            if argc >= 3:
                 self.x = args[2]
-            if argc >= 5:
+            if argc >= 4:
                 self.y = args[3]
         else:
             for key, value in kwargs.items():

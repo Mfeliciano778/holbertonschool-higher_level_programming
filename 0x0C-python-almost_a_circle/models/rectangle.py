@@ -82,16 +82,13 @@ class Rectangle(Base):
 
     def display(self):
         '''display - prints to stdout the rectangle using #'''
-        if self.__width == 0 or self.__height == 0:
-            return rect
-        else:
-            for line in range(0, self.__y):
-                print("")
-            for i in range(0, self.__height):
-                print(" " * self.__x, end="")
-                for j in range(0, self.__width):
-                    print("#", end="")
-                print("")
+        for line in range(0, self.__y):
+            print("")
+        for height in range(0, self.__height):
+            print(" " * self.__x, end="")
+            for width in range(0, self.__width):
+                print("#", end="")
+            print("")
 
     def __str__(self):
         '''__str__ returns the string rep of the rectangle instance'''

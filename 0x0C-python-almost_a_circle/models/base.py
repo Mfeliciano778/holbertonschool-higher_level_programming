@@ -25,11 +25,11 @@ class Base:
     def save_to_file(cls, list_objs):
         '''save_to_file - writes Json string rep to a file'''
         new_list = []
+        name = "{}.json".format(cls.__name__)
         if list_objs:
             for i in list_objs:
                 new_list.append(cls.to_dictionary(i))
-        with open("{}.json".format(cls.__name__), 'w', encoding='utf-8')
-        as file:
+        with open(name, 'w', encoding='utf-8') as file:
                 string = Base.to_json_string(new_list)
                 file.write(string)
 
@@ -42,9 +42,9 @@ class Base:
     def create(cls, **dictionary):
         '''create - returns an instance with all attributes already set'''
         if cls.__name__ == "Rectangle":
-            dumdum = cls(3, 3, 0, 0)
+            dumdum = cls(1, 1, 0, 0)
         else:
-            dumdum = cls(3, 0, 0)
+            dumdum = cls(1, 0, 0)
         dumdum.update(**dictionary)
         return dumdum
 
@@ -52,9 +52,9 @@ class Base:
     def load_from_file(cls):
         '''load_from_file - returns a list of instances'''
         new_list = []
+        name = "{}.json".format(cls.__name__)
         try:
-            with open("{}.json".format(cls.__name__), encoding="utf-8")
-            as file:
+            with open(name, encoding="utf-8") as file:
                 instances = file.read()
         except:
             return new_list
