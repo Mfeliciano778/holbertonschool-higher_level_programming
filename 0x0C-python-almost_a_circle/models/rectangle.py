@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 '''class Base'''
-import json
 from models.base import Base
 
 
@@ -82,11 +81,13 @@ class Rectangle(Base):
 
     def display(self):
         '''display - prints to stdout the rectangle using #'''
-        for line in range(0, self.__y):
+        for line in range(0, self.y):
             print("")
-        for height in range(0, self.__height):
-            print(" " * self.__x, end="")
-            for width in range(0, self.__width):
+        for height in range(0, self.height):
+            #print(" " * self.x, end="")
+            for spaces in range(0, self.x):
+                print(" ", end="")
+            for width in range(0, self.width):
                 print("#", end="")
             print("")
 
