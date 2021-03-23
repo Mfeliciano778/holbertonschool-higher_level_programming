@@ -6,13 +6,12 @@ class Square extends square {
     let char = c;
     if (c === undefined || c === null) {
       char = 'X';
-    } else {
-      for (let row = 0; row < this.size; row++) {
-        for (let column = 0; column < this.size; column++) {
-          process.stdout.write(char);
-        }
-        console.log('');
+    }
+    for (let row = 0; row < this.size; row++) {
+      for (let column = 0; column < this.size; column++) {
+        process.stdout.write(char);
       }
+      console.log('');
     }
   }
 }
