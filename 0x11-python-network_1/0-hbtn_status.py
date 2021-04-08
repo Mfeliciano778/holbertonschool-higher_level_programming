@@ -2,7 +2,7 @@
 from urllib import request
 
 if __name__ == "__main__":
-    with request.urlopen('https://intranet.hbtn.io/projects/300') as r:
+    with request.urlopen('https://intranet.hbtn.io/status') as r:
         body = r.read()
     print("Body response:")
     print("     - type: {}".format(type(body)))
