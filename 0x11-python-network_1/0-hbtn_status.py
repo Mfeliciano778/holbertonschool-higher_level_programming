@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''Task 0'''
 from urllib import request
 
 if __name__ == "__main__":
