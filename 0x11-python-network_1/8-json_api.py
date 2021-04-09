@@ -15,7 +15,7 @@ if __name__ == "__main__":
     except:
         print("Not a valid JSON")
     else:
-        if body != "{}":
+        if body:
             print("[{}] {}".format(body.get("id"), body.get("name")))
         else:
             print("No result")
