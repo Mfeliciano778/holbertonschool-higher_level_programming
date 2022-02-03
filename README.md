@@ -11,5 +11,4 @@ ___
 
 ## Author :black_nib:
 * **Matthew Feliciano** - [Mfeliciano778](https://github.com/Mfeliciano778)
-___
 I am a Junior Full stack Developer that specializes in AR/VR. Student from Holberton School and graduate of Cohort 14.
